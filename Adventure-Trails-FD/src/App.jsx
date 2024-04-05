@@ -1,4 +1,4 @@
-import CardTrilha from "./components/cardTrilha.jsx";
+import CardTrilha from "./components/cardTrilha/index.jsx";
 
 function App() {
 
