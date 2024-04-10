@@ -1,17 +1,24 @@
-
 import * as PropTypes from "prop-types"
+import "./style.css"
 
 function CardTrilha({ dadosTrilha }) {
 
     return (
-        <>
-            <img width={200} src={dadosTrilha.urlImagem} alt="imagem trilha" />
-            <h1>{dadosTrilha.nomeTrilha} - {dadosTrilha.cidade} / {dadosTrilha.estado}</h1>
-            <span>Por: {dadosTrilha.nomeUsuario}</span>
-            <span>Duração: {dadosTrilha.duracao} min </span>
-            <span>Trajeto: {dadosTrilha.trajeto} km</span>
-            <span>{dadosTrilha.dificuldade}</span>
-        </>
+        <div className="card-Conteudo">
+            <div className="trilhaImagem">
+                <img src={dadosTrilha.urlImagem} alt="imagem trilha" />
+            </div>
+            <div className="CardArea">
+                <span className="titulo">{dadosTrilha.nomeTrilha} - {dadosTrilha.cidade} / {dadosTrilha.estado}</span>
+                <span className="usuario">Por: {dadosTrilha.nomeUsuario}</span>
+                <div className="features">
+                <span>Duração: {dadosTrilha.duracao} min </span>
+                <span>Trajeto: {dadosTrilha.trajeto} km</span>
+                </div>
+                
+                <span className="dificuldade">{dadosTrilha.dificuldade}</span>
+            </div>
+        </div>
     )
 
 }
@@ -24,7 +31,7 @@ CardTrilha.propTypes = {
         duracao: PropTypes.number,
         trajeto: PropTypes.number,
         dificuldade: PropTypes.string,
-        tipo: PropTypes.oneOf(['caminhada / trekking','ciclismo']),
+        tipo: PropTypes.oneOf(['caminhada / trekking', 'ciclismo']),
         nomeUsuario: PropTypes.string.isRequired,
         urlImagem: PropTypes.string,
     })
