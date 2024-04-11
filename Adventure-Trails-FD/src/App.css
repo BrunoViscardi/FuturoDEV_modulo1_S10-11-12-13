@@ -13,6 +13,21 @@ a:link {
     color: inherit; /* Mantém a cor padrão do texto */
   }
 
+
+.Retangulo{
+    background-image: url(/trilhaRetangulo.jpg);
+    height: 371px;
+    background-position: center;
+    background-size: cover;
+}
+
+.Retangulo div{
+    background-color: black;
+    opacity: 30%;
+    width: 100%;
+    height: 100%;
+}
+
 .cardContainer{
     display: flex;
     flex-direction: column;
