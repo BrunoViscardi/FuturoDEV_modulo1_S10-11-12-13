@@ -30,6 +30,11 @@
     font-size: 20px;
 }
 
+.divider{
+    width: 40px;
+    border-top: solid 1px var(--cinzaMedio);
+}
+
 .usuario{
     font-weight: 700;
     font-size: 16px;
@@ -42,7 +47,10 @@
     flex-direction: column;
     font-weight: 400;
     gap: 8px;
-    
+}
+
+.features span{
+    color: var(--cinzaEscuro);
 }
 
 .dificuldade{
@@ -51,5 +59,5 @@
     width: 80px;
     text-align: center;
     border-radius: 32px;
-    background-color: #EFF0F0;
+    background-color: var(--cinzaClaro);
 }

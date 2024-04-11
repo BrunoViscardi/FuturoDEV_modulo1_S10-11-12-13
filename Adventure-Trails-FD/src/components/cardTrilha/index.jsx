@@ -10,6 +10,7 @@ function CardTrilha({ dadosTrilha }) {
             </div>
             <div className="CardArea">
                 <span className="titulo">{dadosTrilha.nomeTrilha} - {dadosTrilha.cidade} / {dadosTrilha.estado}</span>
+                <div className="divider"></div>
                 <span className="usuario">Por: {dadosTrilha.nomeUsuario}</span>
                 <div className="features">
                 <span>Duração: {dadosTrilha.duracao} min </span>

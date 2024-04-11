@@ -1,7 +1,20 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family: inter ; */
+}
+
+body{
+    color: var(--nemTaoPreto);
+    font-family: inter;
+}
+
+:root{
+    --nemTaoPreto:#0D1A26;
+    --cinzaEscuro:#5C6670;
+    --cinzaMedio:#AEB3B7;
+    --cinzaClaro:#EFF0F0;
+    --verdeEscuro:#504908;
+    --verdeClaro:#D6E2D3;
 }
 
 a:link {
@@ -39,6 +52,7 @@ a:link {
 .titulo-cardContainer{
     font-weight: 600;
     font-size: 48px;
+    color: var(--verdeEscuro);
 
 }
 
