@@ -6,7 +6,16 @@
 
 .cardContainer{
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
+    padding: 160px 0 160px 0;
+    gap: 80px;
+}
+
+.titulo-cardContainer{
+    font-weight: 600;
+    font-size: 48px;
+
 }
 
 

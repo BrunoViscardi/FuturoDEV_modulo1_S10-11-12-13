@@ -5,7 +5,7 @@ import useFetch from "./Hooks/useFetch.js";
 function App() {
 
     const [data, isLoading] = useFetch("/dadosTrilha.json");
-    console.log(data)
+    
 
     if (isLoading || !data) {
         return (        
@@ -13,11 +13,15 @@ function App() {
                 Carregando...
             </div>
         )
-    }
-    
+    }    
 
     return (        
         <div className="cardContainer">
+            <div className="titulo-cardContainer">
+                Explore trilhas incríveis
+            </div>
+
+
             {
                 data.map((trilha, index) => (
                 <CardTrilha dadosTrilha={trilha} key={index} />
