@@ -1,0 +1,33 @@
+[
+    {
+        "nomeTrilha": "Trilha da Costa da Lagoa",
+        "cidade": "Florianópolis",
+        "estado": "SC",
+        "duracao": 110,
+        "trajeto": 7.5,
+        "dificuldade": "moderado",
+        "nomeUsuario": "Howard Hawks",
+        "urlImagem": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "nomeTrilha": "Trilha da Praia dos Naufragados",
+        "cidade": "Florianópolis",
+        "estado": "SC",
+        "duracao": 50,
+        "trajeto": 2.6,
+        "dificuldade": "iniciante",
+        "nomeUsuario": "Frank Darabont",
+        "urlImagem": "https://images.pexels.com/photos/7084186/pexels-photo-7084186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "nomeTrilha": "Trilha Praia da Lagoinha do Leste",
+        "cidade": "Florianópolis",
+        "estado": "SC",
+        "duracao": 150,
+        "trajeto": 4,
+        "dificuldade": "moderado",
+        "nomeUsuario": "Orson Welles",
+        "urlImagem": "https://images.pexels.com/photos/2587310/pexels-photo-2587310.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+
+]
