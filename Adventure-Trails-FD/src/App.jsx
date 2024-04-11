@@ -1,6 +1,7 @@
 import CardTrilha from "./components/cardTrilha/index.jsx";
 import "./App.css"
 import useFetch from "./Hooks/useFetch.js";
+import Header from "./components/header/index.jsx";
 
 function App() {
 
@@ -15,7 +16,13 @@ function App() {
         )
     }    
 
-    return (        
+    return (
+        <>
+        <Header/>
+        
+
+
+
         <div className="cardContainer">
             <div className="titulo-cardContainer">
                 Explore trilhas incríveis
@@ -28,6 +35,7 @@ function App() {
             ))
             }
         </div>
+        </>
     )
 }
 

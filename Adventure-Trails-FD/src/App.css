@@ -4,6 +4,15 @@
     /* font-family: inter ; */
 }
 
+a:link {
+    color: inherit; /* Mantém a cor padrão do texto */
+    text-decoration: none; /* retira sublinhado dos links */
+  }
+  
+  a:visited {
+    color: inherit; /* Mantém a cor padrão do texto */
+  }
+
 .cardContainer{
     display: flex;
     flex-direction: column;
