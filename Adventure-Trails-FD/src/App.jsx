@@ -5,9 +5,18 @@ import useFetch from "./Hooks/useFetch.js";
 function App() {
 
     const [data, isLoading] = useFetch("/dadosTrilha.json");
+    console.log(data)
+
+    if (isLoading || !data) {
+        return (        
+            <div className="cardContainer">
+                Carregando...
+            </div>
+        )
+    }
     
 
-    return (
+    return (        
         <div className="cardContainer">
             {
                 data.map((trilha, index) => (
