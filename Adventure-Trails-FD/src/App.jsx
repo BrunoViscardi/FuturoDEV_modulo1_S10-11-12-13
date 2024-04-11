@@ -1,25 +1,16 @@
 import CardTrilha from "./components/cardTrilha/index.jsx";
 import "./App.css"
+import useFetch from "./Hooks/useFetch.js";
 
 function App() {
 
-    const listaTrilhas = [
-        {
-            nomeTrilha: "Trilha da Costa da Lagoa",
-            cidade: "Florianópolis",
-            estado: "SC",
-            duracao: 120,
-            trajeto: 4,
-            dificuldade: "iniciante",
-            nomeUsuario: "Bruno Viscardi",
-            urlImagem: "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        }
-    ]
+    const [data, isLoading] = useFetch("/dadosTrilha.json");
+    
 
     return (
         <div className="cardContainer">
             {
-                listaTrilhas.map((trilha, index) => (
+                data.map((trilha, index) => (
                 <CardTrilha dadosTrilha={trilha} key={index} />
             ))
             }
