@@ -1,6 +1,6 @@
-import Header from "../components/header";
+import Header from "../../components/header/index.jsx";
 import './home.css'
-import CButton from '../components/atoms/button/Cbutton.jsx'
+import CButton from '../../components/atoms/button/Cbutton.jsx'
 import { Link } from 'react-router-dom';
 
 

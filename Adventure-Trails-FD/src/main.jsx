@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './pages/home.jsx'
-import Trilhas from './pages/trilhas.jsx'
-import Cadastro from './pages/cadastro.jsx'
+import Home from './pages/home/home.jsx'
+import Trilhas from './pages/trilhas/trilhas.jsx'
+import Cadastro from './pages/cadastro/cadastro.jsx'
 
 
 const routers = createBrowserRouter([
