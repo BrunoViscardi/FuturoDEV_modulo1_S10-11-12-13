@@ -1,4 +1,5 @@
 import Header from "../../components/header/index.jsx";
+import Footer from "../../components/footer/footer.jsx";
 import './home.css'
 import CButton from '../../components/atoms/button/Cbutton.jsx'
 import { Link } from 'react-router-dom';
@@ -44,6 +45,8 @@ function Home() {
                 </div>
                 <img src="/footpath.jpg" alt="caminho na floresta" />
             </section>
+
+            <Footer />
         </>
     )
 }
