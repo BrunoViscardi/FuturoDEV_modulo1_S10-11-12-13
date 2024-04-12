@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
+import App from './App.jsx'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -11,16 +11,22 @@ import Cadastro from './pages/cadastro/cadastro.jsx'
 
 const routers = createBrowserRouter([
   {
-    path:"/",
-    element: <Home/>
-  },
-  {
-    path:"/cadastro",
-    element: <Cadastro/>
-  },
-  {
-    path:"/trilhas",
-    element: <Trilhas/>
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/cadastro",
+        element: <Cadastro />
+      },
+      {
+        path: "/trilhas",
+        element: <Trilhas />
+      }
+    ]
   }
 ])
 
