@@ -1,0 +1,41 @@
+.RetanguloHome{
+    background-image: url(/trilhaRetangulo.jpg);
+    height: calc(100vh - 80px);
+    background-position: center;
+    background-size: cover;
+}
+
+.RetanguloContainer{
+    background-color:rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.RetanguloConteudo{
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+.RetanguloConteudo h1{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 45px;
+    width: 730px;
+    text-align: center;
+    
+}
+
+.RetanguloConteudo p{
+    width: 730px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+}
+
