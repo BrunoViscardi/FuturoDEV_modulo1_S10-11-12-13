@@ -1,6 +1,5 @@
 import CardTrilha from "../../components/cardTrilha/index.jsx";
 import useFetch from "../../Hooks/useFetch.js";
-import Header from "../../components/header/index.jsx";
 import './trilhas.css'
 
 
@@ -18,7 +17,7 @@ function Trilhas(){
 
     return (
         <>
-        <Header/>
+        
 
 
         <div className="Retangulo"> <div></div></div>
