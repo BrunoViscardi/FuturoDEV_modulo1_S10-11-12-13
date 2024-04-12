@@ -1,19 +1,18 @@
 import "./style.css"
+import { Link } from 'react-router-dom';
 
 
 function Header() {
 
     return (
         <nav className="NavBar">
-            <a href="">Adveture Trails FD</a>
+            <Link to="/">Adveture Trails FD</Link>
             <div>
-                <a href="">Explorar Trilhas</a>
-                <a href="">Cadastrar trilhas</a>
+                <Link to="/trilhas">Explorar trilhas</Link>
+                <Link to="/cadastro">Cadastrar trilhas</Link>
             </div>
         </nav>
     )
-
-
 }
 
 
