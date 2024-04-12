@@ -39,3 +39,54 @@
     letter-spacing: 0.01em;
 }
 
+.explorarContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px 83px 50px 83px;
+    gap: 51px;
+    font-family: Montserrat;
+}
+
+.explorarContainer div{
+    display: flex;
+    justify-content: center;
+}
+
+.cadastrarContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px 83px 50px 83px;
+    gap: 51px;
+    font-family: Montserrat;
+}
+
+.cadastrarContainer div{
+    width: 554px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.cadastrarContainer img{
+    height: 330px;
+    width: 617.14px;
+    object-fit: cover;
+}
+
+.tituloSection{
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: -0.015em;
+}
+
+.textoSection{
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+}
+
+
+
