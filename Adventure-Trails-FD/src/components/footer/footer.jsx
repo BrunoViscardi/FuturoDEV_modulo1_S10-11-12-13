@@ -1,5 +1,8 @@
 import "./footer.css"
 import { Link } from 'react-router-dom';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 
 function Footer() {
@@ -8,9 +11,9 @@ function Footer() {
         <nav className="footerContainer">
             <Link to="/">Adveture Trails FD</Link>
             <div>
-                <a href="">link1</a>
-                <a href="">link2</a>
-                <a href="">link3</a>             
+                <a href=""><GitHubIcon/></a>
+                <a href=""><LinkedInIcon/></a>
+                <a href=""><InstagramIcon/></a>     
             </div>
         </nav>
     )
