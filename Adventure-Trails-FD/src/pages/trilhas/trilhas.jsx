@@ -1,10 +1,13 @@
 import CardTrilha from "../../components/cardTrilha/index.jsx";
-import useFetch from "../../Hooks/useFetch.js";
-import './trilhas.css'
+import './trilhas.css';
+import { useContext } from "react";
+import {TrilhasContext} from "../../context/TrilhasContext.jsx";
 
 
 function Trilhas() {
-    const [data, isLoading] = useFetch("/dadosTrilha.json");
+
+    const {trilhas, isLoading}= useContext(TrilhasContext);
+    
 
 
     return (
@@ -18,11 +21,13 @@ function Trilhas() {
                 </div>
 
 
-                {Array.isArray(data) && !isLoading ? (
-                    data.map((trilha, index) => (
+                {Array.isArray(trilhas) && !isLoading ? (
+                    trilhas.map((trilha, index) => (
                         <CardTrilha dadosTrilha={trilha} key={index} />))
                 ) : (<span> Não há dados disponíveis</span>)
                 }
+
+
             </div>
         </>
     )
