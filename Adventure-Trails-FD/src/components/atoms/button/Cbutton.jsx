@@ -1,9 +1,9 @@
 import './Cbutton.css'
 
-function Cbutton({onClick, children}){
+function Cbutton({estilo, onClick, children}){
     return(
         <>
-        <button className='Cbutton' onClick={onClick}> {children} </button>
+        <button className={estilo} onClick={onClick}> {children} </button>
         </>
     )
 }

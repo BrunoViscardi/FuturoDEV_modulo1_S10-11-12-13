@@ -1,16 +1,24 @@
-.Cbutton{
+button{
     border-radius: 4px;
     border: none;
     height: 40px;
     line-height: 40px;
     text-align: center;
-    color: white;
-    background-color: var(--verdeEscuro);
-    font-weight: 700;
     font-size: 16px;
-    border-radius: 4px;
     padding: 0 16px;
     cursor: pointer;
     font-family: inter;
+    font-weight: 700;
 
+}
+
+.Contained{    
+    color: white;
+    background-color: var(--verdeEscuro);
+}
+
+.Outlined{
+    color: var(--verdeEscuro);
+    border: solid 2px var(--verdeEscuro);
+    background-color: transparent;
 }
