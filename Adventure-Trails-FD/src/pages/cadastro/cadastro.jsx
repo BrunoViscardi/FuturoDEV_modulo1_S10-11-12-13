@@ -25,10 +25,13 @@ function Cadastro() {
 
 
     //desdestruturação para usar a função register da biblioteca
-    const { register } = useForm();
+    const { register, handleSubmit } = useForm();
 
 
+    function sendForm(formValue){
+        console.log(formValue)
 
+    }
 
 
 
@@ -39,7 +42,7 @@ function Cadastro() {
     return (
         <div className="cadastroContainer">
             <h1>Cadastro de nova trilha</h1>
-            <form>
+            <form onSubmit={handleSubmit(sendForm)}>
                 <div className="campo">
                     <label htmlFor="nomeTrilha">Nome da trilha</label>
                     <input type="text" placeholder="digite o nome da trilha"
