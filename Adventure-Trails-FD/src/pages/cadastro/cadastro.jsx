@@ -3,6 +3,7 @@ import { useContext, useEffect } from "react";
 import CButton from '../../components/atoms/button/Cbutton.jsx'
 import { useForm } from "react-hook-form"
 import { TrilhasContext } from "../../context/TrilhasContext.jsx";
+import { useNavigate } from 'react-router-dom';
 
 
 function Cadastro() {
@@ -33,8 +34,13 @@ function Cadastro() {
     function sendForm(formValue) {
         console.log(formValue)
         addTrail(formValue)
-
     }
+
+    //Função voltar na navegação
+    const navigate = useNavigate();
+    function handleVoltar() {
+        navigate(-1); // Navega para a página anterior no histórico
+      }
 
 
 
@@ -149,7 +155,7 @@ function Cadastro() {
 
                 <div className="formAcoes">
                     <CButton type="submit" estilo="Contained">Cadastrar</CButton>
-                    <CButton estilo="Outlined">Voltar</CButton>
+                    <CButton estilo="Outlined" onClick={handleVoltar} >Voltar</CButton>
                 </div>
 
 
