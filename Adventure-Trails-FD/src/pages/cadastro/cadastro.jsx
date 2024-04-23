@@ -26,30 +26,30 @@ function Cadastro() {
     return (
         <div className="cadastroContainer">
             <h1>Cadastro de nova trilha</h1>
-            <form action="">
+            <form>
                 <div className="campo">
-                    <p>Nome da trilha</p>
+                    <label htmlFor="nomeTrilha">Nome da trilha</label>
                     <input type="text" placeholder="digite o nome da trilha" />
                 </div>
 
                 <div className="campoColuna">
                     <div className="campo">
-                        <p>Duração estimada (min)</p>
+                        <label htmlFor="duracao">Duração estimada (min)</label>
                         <input type="text" placeholder="digite a duração em minutos" />
                     </div>
 
                     <div className="campo">
-                        <p>Trajeto (km)</p>
+                        <label htmlFor="trajeto">Trajeto (km)</label>
                         <input type="text" placeholder="digite a distância em kilômetros" />
                     </div>
 
                     <div className="campo">
-                        <p>Cidade</p>
+                        <label htmlFor="cidade">Cidade</label>
                         <input type="text" placeholder="digite o nome da cidade" />
                     </div>
 
                     <div className="campo">
-                        <p>Estado</p>
+                        <label htmlFor="estado">Estado</label>
                         <select>
                             <option value="" defaultValue disabled>Selecione um estado</option>
                             {estados.map((estado, index) => (
@@ -61,15 +61,16 @@ function Cadastro() {
                     </div>
 
                     <div className="campo">
-                        <p>Tipo de trilha</p>
+                        <label htmlFor="tipo">Tipo de trilha</label>
                         <select>
+                            <option value="" defaultValue disabled>Selecione o tipo de trilha</option>
                             <option value="caminhada / trekking">caminhada / trekking</option>
                             <option value="ciclismo">ciclismo</option>
                         </select>
                     </div>
 
                     <div className="campo">
-                        <p>Dificuldade</p>
+                        <label htmlFor="dificuldade">Dificuldade</label>
                         <select>
                             <option value="" defaultValue disabled>Selecione a dificuldade</option>
                             <option value="iniciante">iniciante</option>
@@ -80,12 +81,12 @@ function Cadastro() {
                 </div>
 
                 <div className="campo">
-                    <p>Nome completo usuário</p>
+                    <label htmlFor="nomeUsuario">Nome completo usuário</label>
                     <input type="text" placeholder="seu nome completo" />
                 </div>
 
                 <div className="campo">
-                    <p>URL imagem trilha</p>
+                    <label htmlFor="urlImagem">URL imagem trilha</label>
                     <input type="text" placeholder="insira um link de uma imagem da trilha" />
                 </div>
 
