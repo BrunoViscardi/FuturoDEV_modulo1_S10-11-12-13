@@ -25,12 +25,12 @@ function Cadastro() {
     ];
 
 
-    //desdestruturação para usar a função register da biblioteca
-    const { register, handleSubmit } = useForm();
-    const {addTrail}=useContext(TrilhasContext)
+    //desdestruturação para usar a função register,  da biblioteca
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { addTrail } = useContext(TrilhasContext)
 
 
-    function sendForm(formValue){
+    function sendForm(formValue) {
         console.log(formValue)
         addTrail(formValue)
 
@@ -54,6 +54,7 @@ function Cadastro() {
                             maxLength: { value: 100, message: "Máximo de 100 caracteres permitidos" }
                         })}
                     />
+                    {errors?.nomeTrilha && <p>{errors.nomeTrilha?.message}</p>}
                 </div>
 
                 <div className="campoColuna">
@@ -64,6 +65,7 @@ function Cadastro() {
                                 required: "Este campo é obrigatório",
                                 setValueAs: (value) => Number(value)
                             })} />
+                        {errors?.duracao && <p>{errors.duracao?.message}</p>}
                     </div>
 
                     <div className="campo">
@@ -72,8 +74,8 @@ function Cadastro() {
                             {...register("trajeto", {
                                 required: "Este campo é obrigatório",
                                 setValueAs: (value) => Number(value)
-                            })}
-                        />
+                            })} />
+                        {errors?.trajeto && <p>{errors.trajeto?.message}</p>}
                     </div>
 
                     <div className="campo">
@@ -83,12 +85,14 @@ function Cadastro() {
                                 required: "Este campo é obrigatório",
                                 maxLength: { value: 60, message: "Máximo de 60 caracteres permitidos" }
                             })} />
+                        {errors?.cidade && <p>{errors.cidade?.message}</p>}
                     </div>
 
                     <div className="campo">
                         <label htmlFor="estado">Estado</label>
                         <select {...register("estado", {
-                            required: "Este campo é obrigatório"})}>
+                            required: "Este campo é obrigatório"
+                        })}>
                             <option value="" defaultValue>Selecione um estado</option>
                             {estados.map((estado, index) => (
                                 <option key={index} value={estado}>
@@ -96,27 +100,32 @@ function Cadastro() {
                                 </option>
                             ))}
                         </select>
+                        {errors?.estado && <p>{errors.estado?.message}</p>}
                     </div>
 
                     <div className="campo">
                         <label htmlFor="tipo">Tipo de trilha</label>
-                        <select {...register("tipo",{
-                            required: "Este campo é obrigatório"})}>
+                        <select {...register("tipo", {
+                            required: "Este campo é obrigatório"
+                        })}>
                             <option value="" defaultValue>Selecione o tipo de trilha</option>
                             <option value="caminhada / trekking">caminhada / trekking</option>
                             <option value="ciclismo">ciclismo</option>
                         </select>
+                        {errors?.tipo && <p>{errors.tipo?.message}</p>}
                     </div>
 
                     <div className="campo">
                         <label htmlFor="dificuldade">Dificuldade</label>
                         <select {...register("dificuldade", {
-                            required: "Este campo é obrigatório"})}>
+                            required: "Este campo é obrigatório"
+                        })}>
                             <option value="" defaultValue>Selecione a dificuldade</option>
                             <option value="iniciante">iniciante</option>
                             <option value="moderado">moderado</option>
                             <option value="dificil">difícil</option>
                         </select>
+                        {errors?.dificuldade && <p>{errors.dificuldade?.message}</p>}
                     </div>
                 </div>
 
@@ -127,6 +136,7 @@ function Cadastro() {
                             required: "Este campo é obrigatório",
                             maxLength: { value: 60, message: "Máximo de 60 caracteres permitidos" }
                         })} />
+                    {errors?.nomeUsuario && <p>{errors.nomeUsuario?.message}</p>}
                 </div>
 
                 <div className="campo">
