@@ -1,7 +1,8 @@
 import "./cadastro.css"
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import CButton from '../../components/atoms/button/Cbutton.jsx'
 import { useForm } from "react-hook-form"
+import { TrilhasContext } from "../../context/TrilhasContext.jsx";
 
 
 function Cadastro() {
@@ -26,10 +27,12 @@ function Cadastro() {
 
     //desdestruturação para usar a função register da biblioteca
     const { register, handleSubmit } = useForm();
+    const {addTrail}=useContext(TrilhasContext)
 
 
     function sendForm(formValue){
         console.log(formValue)
+        addTrail(formValue)
 
     }
 
@@ -58,7 +61,8 @@ function Cadastro() {
                         <label htmlFor="duracao">Duração estimada (min)</label>
                         <input type="number" step={5} placeholder="digite a duração em minutos"
                             {...register("duracao", {
-                                required: "Este campo é obrigatório"
+                                required: "Este campo é obrigatório",
+                                setValueAs: (value) => Number(value)
                             })} />
                     </div>
 
@@ -66,7 +70,8 @@ function Cadastro() {
                         <label htmlFor="trajeto">Trajeto (km)</label>
                         <input type="number" placeholder="digite a distância em kilômetros"
                             {...register("trajeto", {
-                                required: "Este campo é obrigatório"
+                                required: "Este campo é obrigatório",
+                                setValueAs: (value) => Number(value)
                             })}
                         />
                     </div>
