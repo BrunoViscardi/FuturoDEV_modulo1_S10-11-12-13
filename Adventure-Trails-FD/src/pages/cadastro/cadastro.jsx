@@ -83,12 +83,7 @@ function Cadastro() {
                     <div className="campo">
                         <label htmlFor="estado">Estado</label>
                         <select {...register("estado", {
-                            required: "Este campo é obrigatório",
-                            validate: {
-                                validValue: (value) => value !== "",
-                                message: "Por favor, selecione um estado válido"
-                            }
-                        })}>
+                            required: "Este campo é obrigatório"})}>
                             <option value="" defaultValue>Selecione um estado</option>
                             {estados.map((estado, index) => (
                                 <option key={index} value={estado}>
@@ -100,13 +95,8 @@ function Cadastro() {
 
                     <div className="campo">
                         <label htmlFor="tipo">Tipo de trilha</label>
-                        <select {...register("tipo", {
-                            required: "Este campo é obrigatório",
-                            validate: {
-                                validValue: (value) => value !== "",
-                                message: "Por favor, selecione um tipo válido"
-                            }
-                        })}>
+                        <select {...register("tipo",{
+                            required: "Este campo é obrigatório"})}>
                             <option value="" defaultValue>Selecione o tipo de trilha</option>
                             <option value="caminhada / trekking">caminhada / trekking</option>
                             <option value="ciclismo">ciclismo</option>
@@ -116,12 +106,7 @@ function Cadastro() {
                     <div className="campo">
                         <label htmlFor="dificuldade">Dificuldade</label>
                         <select {...register("dificuldade", {
-                            required: "Este campo é obrigatório",
-                            validate: {
-                                validValue: (value) => value !== "",
-                                message: "Por favor, selecione uma dificuldade válida"
-                            }
-                        })}>
+                            required: "Este campo é obrigatório"})}>
                             <option value="" defaultValue>Selecione a dificuldade</option>
                             <option value="iniciante">iniciante</option>
                             <option value="moderado">moderado</option>
@@ -148,7 +133,7 @@ function Cadastro() {
 
 
                 <div className="formAcoes">
-                    <CButton estilo="Contained">Cadastrar</CButton>
+                    <CButton type="submit" estilo="Contained">Cadastrar</CButton>
                     <CButton estilo="Outlined">Voltar</CButton>
                 </div>
 
