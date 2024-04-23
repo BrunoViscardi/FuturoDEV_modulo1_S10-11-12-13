@@ -74,6 +74,17 @@ input::placeholder {
     width: calc(50% - 20px/2);
 }
 
+.campo p {
+    color: var(--vermelhoErro);
+    font-size: 10.667px;
+    padding-left: 16px;
+}
+
+.campo p::before{
+    content: "* ";
+}
+
+
 .formAcoes{
     margin-top: 20px;
     display: flex;
