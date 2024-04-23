@@ -1,6 +1,7 @@
 import "./cadastro.css"
 import { useEffect } from "react";
 import CButton from '../../components/atoms/button/Cbutton.jsx'
+import { useForm } from "react-hook-form"
 
 
 function Cadastro() {
@@ -16,12 +17,24 @@ function Cadastro() {
 
 
 
-
     const estados = [
         'AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA',
         'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN',
         'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'
     ];
+
+
+    //desdestruturação para usar a função register da biblioteca
+    const { register } = useForm();
+
+
+
+
+
+
+
+
+
 
     return (
         <div className="cadastroContainer">
@@ -29,29 +42,51 @@ function Cadastro() {
             <form>
                 <div className="campo">
                     <label htmlFor="nomeTrilha">Nome da trilha</label>
-                    <input type="text" placeholder="digite o nome da trilha" />
+                    <input type="text" placeholder="digite o nome da trilha"
+                        {...register("nomeTrilha", {
+                            required: "Este campo é obrigatório",
+                            maxLength: { value: 100, message: "Máximo de 100 caracteres permitidos" }
+                        })}
+                    />
                 </div>
 
                 <div className="campoColuna">
                     <div className="campo">
                         <label htmlFor="duracao">Duração estimada (min)</label>
-                        <input type="text" placeholder="digite a duração em minutos" />
+                        <input type="number" step={5} placeholder="digite a duração em minutos"
+                            {...register("duracao", {
+                                required: "Este campo é obrigatório"
+                            })} />
                     </div>
 
                     <div className="campo">
                         <label htmlFor="trajeto">Trajeto (km)</label>
-                        <input type="text" placeholder="digite a distância em kilômetros" />
+                        <input type="number" placeholder="digite a distância em kilômetros"
+                            {...register("trajeto", {
+                                required: "Este campo é obrigatório"
+                            })}
+                        />
                     </div>
 
                     <div className="campo">
                         <label htmlFor="cidade">Cidade</label>
-                        <input type="text" placeholder="digite o nome da cidade" />
+                        <input type="text" placeholder="digite o nome da cidade"
+                            {...register("cidade", {
+                                required: "Este campo é obrigatório",
+                                maxLength: { value: 60, message: "Máximo de 60 caracteres permitidos" }
+                            })} />
                     </div>
 
                     <div className="campo">
                         <label htmlFor="estado">Estado</label>
-                        <select>
-                            <option value="" defaultValue disabled>Selecione um estado</option>
+                        <select {...register("estado", {
+                            required: "Este campo é obrigatório",
+                            validate: {
+                                validValue: (value) => value !== "",
+                                message: "Por favor, selecione um estado válido"
+                            }
+                        })}>
+                            <option value="" defaultValue>Selecione um estado</option>
                             {estados.map((estado, index) => (
                                 <option key={index} value={estado}>
                                     {estado}
@@ -62,8 +97,14 @@ function Cadastro() {
 
                     <div className="campo">
                         <label htmlFor="tipo">Tipo de trilha</label>
-                        <select>
-                            <option value="" defaultValue disabled>Selecione o tipo de trilha</option>
+                        <select {...register("tipo", {
+                            required: "Este campo é obrigatório",
+                            validate: {
+                                validValue: (value) => value !== "",
+                                message: "Por favor, selecione um tipo válido"
+                            }
+                        })}>
+                            <option value="" defaultValue>Selecione o tipo de trilha</option>
                             <option value="caminhada / trekking">caminhada / trekking</option>
                             <option value="ciclismo">ciclismo</option>
                         </select>
@@ -71,8 +112,14 @@ function Cadastro() {
 
                     <div className="campo">
                         <label htmlFor="dificuldade">Dificuldade</label>
-                        <select>
-                            <option value="" defaultValue disabled>Selecione a dificuldade</option>
+                        <select {...register("dificuldade", {
+                            required: "Este campo é obrigatório",
+                            validate: {
+                                validValue: (value) => value !== "",
+                                message: "Por favor, selecione uma dificuldade válida"
+                            }
+                        })}>
+                            <option value="" defaultValue>Selecione a dificuldade</option>
                             <option value="iniciante">iniciante</option>
                             <option value="moderado">moderado</option>
                             <option value="dificil">difícil</option>
@@ -82,12 +129,17 @@ function Cadastro() {
 
                 <div className="campo">
                     <label htmlFor="nomeUsuario">Nome completo usuário</label>
-                    <input type="text" placeholder="seu nome completo" />
+                    <input type="text" placeholder="seu nome completo"
+                        {...register("nomeUsuario", {
+                            required: "Este campo é obrigatório",
+                            maxLength: { value: 60, message: "Máximo de 60 caracteres permitidos" }
+                        })} />
                 </div>
 
                 <div className="campo">
                     <label htmlFor="urlImagem">URL imagem trilha</label>
-                    <input type="text" placeholder="insira um link de uma imagem da trilha" />
+                    <input type="text" placeholder="insira um link de uma imagem da trilha"
+                        {...register("urlImagem")} />
                 </div>
 
 
