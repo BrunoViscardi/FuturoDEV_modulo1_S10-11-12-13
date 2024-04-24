@@ -155,7 +155,7 @@ function Cadastro() {
 
                 <div className="formAcoes">
                     <CButton type="submit" estilo="Contained">Cadastrar</CButton>
-                    <CButton estilo="Outlined" onClick={handleVoltar} >Voltar</CButton>
+                    <CButton type="button" estilo="Outlined" onClick={handleVoltar} >Voltar</CButton>
                 </div>
 
 
